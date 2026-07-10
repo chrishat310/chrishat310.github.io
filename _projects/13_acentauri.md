@@ -2,7 +2,7 @@
 layout: page
 title: aCentauri Solar Racing — Mechanical System Advisor
 description: Advised a solar-car team preparing for the 3000 km BWSC 2025.
-img: assets/img/1.jpg
+img: assets/img/projects/acentauri.png
 importance: 1
 category: leadership
 ---

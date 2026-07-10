@@ -2,7 +2,7 @@
 layout: page
 title: High-Performance C++ N-Body Simulation
 description: Barnes-Hut N-body simulation, O(n log n), parallelised with OpenMP.
-img: assets/img/9.jpg
+img: assets/img/projects/nbody.png
 importance: 5
 category: software
 ---

@@ -12,3 +12,4 @@ assets/libs/
 assets/rendercv/rendercv_output/*.typ
 node_modules/
 vendor
+project_presentations/

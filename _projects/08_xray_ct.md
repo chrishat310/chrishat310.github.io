@@ -2,7 +2,7 @@
 layout: page
 title: X-ray CT of Fracture in Heterogeneous Materials
 description: X-ray computed tomography of fracture, with HPC data pipelines.
-img: assets/img/4.jpg
+img: assets/img/projects/xray-ct.png
 importance: 2
 category: simulation
 ---

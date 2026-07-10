@@ -9,24 +9,24 @@ cv:
     MSc candidate in Computational Science & Engineering at ETH Zürich, with an MIT thesis on
     mixed-variable Bayesian optimisation for engineering design. I build structured, tested
     scientific Python (pytest, ruff, mypy) and have contributed 3D generative models to the
-    open-source EngiOpt library. Native French and English, German B1.
+    open-source EngiOpt library. Native French and English, German A2.
 
   social_networks:
     - network: GitHub
-      username: Psych17101
+      username: chrishat310
     - network: LinkedIn
       username: christophehahatterer
 
   sections:
     Education:
       - institution: Massachusetts Institute of Technology (MIT) — DeCoDe Lab
-        location: Cambridge, MA, USA
+        location: Boston, MA, USA
         area: Mechanical Engineering — MSc Thesis
         studyType: Visiting Researcher
         start_date: 2026-03-01
         end_date: 2026-09-01
         highlights:
-          - "Thesis — Mixed-Variable Bayesian Optimization for Engineering Problems with Tabular Foundation Models."
+          - "Thesis — Mixed-Variable Bayesian Optimisation with Prior-Fitted Networks (PFNs) for Engineering Design."
           - "Supervised by Prof. Faez Ahmed and Prof. Mark Fuge."
 
       - institution: ETH Zürich
@@ -58,8 +58,8 @@ cv:
         start_date: 2025-08-01
         end_date: 2026-02-01
         highlights:
-          - "Built multi-physics COMSOL models of self-healing behaviour in HV transformer capacitors, with Python post-processing and analysis tooling."
-          - "Lead-authored an internal research paper on the multi-physics modelling framework."
+          - "Built multi-physics finite-element COMSOL models of high-voltage self-healing capacitors, analysing dielectric breakdown and post-fault recovery, with Python post-processing pipelines."
+          - "Lead-authored an IEEE research paper on the multi-physics modelling framework alongside two senior researchers."
 
       - company: Axalp Technologies
         position: Aerospace Engineer (Internship)
@@ -86,8 +86,8 @@ cv:
         start_date: 2025-06-01
         end_date: 2025-08-01
         highlights:
-          - "Extended generative models (GANs, SliceGAN, multi-variable VAE) to the 3D domain for engineering design."
-          - "Contributed the 3D models to open-source EngiOpt via a maintainer-reviewed pull request (~2,100 lines)."
+          - "Extended generative models (SliceGAN, conditional GAN, multi-view VAE) to the 3D domain for engineering design."
+          - "Contributed the 3D models upstream to open-source EngiOpt via a maintainer-reviewed pull request (~2,142 additions across 73 commits, passing ruff/mypy/pre-commit CI)."
 
     Leadership:
       - company: aCentauri Solar Racing
@@ -97,7 +97,7 @@ cv:
         end_date: 2025-01-01
         highlights:
           - "Advised 20+ members across Aerodynamics, Mechanical, and Structures for BWSC 2025 (3000 km solar endurance race)."
-          - "Set up GANTT scheduling, budgeting (~CHF 150K), and systems-engineering practices."
+          - "Set up GANTT scheduling, budgeting, and systems-engineering practices."
 
       - company: NOVA Electric Racing
         position: Lead Chassis Engineer
@@ -126,6 +126,6 @@ cv:
       - name: English
         summary: "Native"
       - name: German
-        summary: "B1"
+        summary: "A2"
       - name: Mandarin
         summary: "Limited"

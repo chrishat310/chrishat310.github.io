@@ -2,7 +2,7 @@
 layout: page
 title: EngiOpt — 3D Generative Models (Open Source)
 description: Extended generative models to 3D and merged them into the open-source EngiOpt library.
-img: assets/img/3.jpg
+img: assets/img/projects/engiopt.png
 importance: 1
 category: software
 ---

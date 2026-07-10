@@ -2,7 +2,7 @@
 layout: page
 title: Bayesian Optimisation of Drug-Candidate Features
 description: Optimised predicted bioavailability under synthesizability constraints.
-img: assets/img/5.jpg
+img: assets/img/projects/bayesopt-drug.png
 importance: 3
 category: software
 ---

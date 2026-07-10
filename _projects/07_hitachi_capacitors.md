@@ -2,7 +2,7 @@
 layout: page
 title: Self-Healing HV Capacitors (Hitachi Energy)
 description: Multi-physics COMSOL modelling of self-healing high-voltage transformer capacitors.
-img: assets/img/2.jpg
+img: assets/img/projects/hitachi-capacitors.png
 importance: 1
 category: simulation
 ---

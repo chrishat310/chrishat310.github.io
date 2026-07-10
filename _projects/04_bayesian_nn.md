@@ -2,7 +2,7 @@
 layout: page
 title: Bayesian Neural Network for Satellite Imagery
 description: Uncertainty-aware satellite image classification with SWA-Gaussian.
-img: assets/img/7.jpg
+img: assets/img/projects/bayesian-nn.png
 importance: 4
 category: software
 ---

@@ -2,7 +2,7 @@
 layout: page
 title: Swiss Solar Boat — Carbon-Fibre Foil
 description: Carbon-fibre lateral foil; 2nd place, Monaco Energy Boat Challenge 2022.
-img: assets/img/10.jpg
+img: assets/img/projects/solar-boat.png
 importance: 2
 category: mechanical
 ---

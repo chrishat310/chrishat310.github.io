@@ -2,7 +2,7 @@
 layout: page
 title: Topology Optimisation of Damaged Structures
 description: Topology optimisation within two-scale damaged structures.
-img: assets/img/6.jpg
+img: assets/img/projects/topology-opt.png
 importance: 3
 category: simulation
 ---

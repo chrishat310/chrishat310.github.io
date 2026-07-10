@@ -2,7 +2,7 @@
 layout: page
 title: NOVA Electric Racing — Bike Chassis
 description: Lead chassis engineer for an electric racing-bike prototype.
-img: assets/img/12.jpg
+img: assets/img/projects/nova-chassis.png
 importance: 3
 category: mechanical
 ---
