@@ -95,6 +95,16 @@ ninja.data = [{
           description: "Advised a solar-car team preparing for the 3000 km BWSC 2025.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/13_acentauri/";
+            },},{id: "projects-multi-objective-optimization-of-ev-battery-enclosures",
+          title: 'Multi-Objective Optimization of EV Battery Enclosures',
+          description: "NSGA optimisation of a sandwich-panel battery enclosure with automated ABAQUS crash FE.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/14_battery_enclosure_opt/";
+            },},{id: "projects-stiffened-composite-panel-optimization",
+          title: 'Stiffened Composite Panel Optimization',
+          description: "MATLAB sizing of a stiffened composite panel under compression.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/15_composite_panel/";
             },},{
         id: 'social-cv',
         title: 'CV',
