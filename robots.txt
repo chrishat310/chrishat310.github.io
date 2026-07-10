@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://Psych17101.github.io/sitemap.xml
+Sitemap: https://chrishat310.github.io/sitemap.xml
