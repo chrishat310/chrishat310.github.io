@@ -7,6 +7,12 @@ importance: 1
 category: mechanical
 ---
 
-At **Axalp Technologies** (aerospace), I led the **end-to-end development** of a lightweight **thermal cooling system** for an aircraft auxiliary battery pack in **Siemens NX** — from scoping through integration testing — achieving roughly **30% weight reduction**. I also developed dynamic simulation models for aircraft landing-gear kinematics.
+On an aircraft, every kilogram you add to cool a battery is a kilogram you cannot spend on anything else, so a cooling system is really an argument about weight. During my internship at **Axalp Technologies**, I led the **end-to-end development** of a lightweight **liquid-cooled system** for an aircraft auxiliary battery pack in **Siemens NX** — from scoping the requirements through to integration testing — and got the pack roughly **30% lighter** than the starting point, while validating that the lighter structure still survived impact loading with structural FEA in NX Nastran. Owning it from requirements to test meant living with every trade-off myself: a lighter bracket that fails a crash case is not lighter, it is just wrong, and the discipline of chasing weight without giving up structural margin is the part I valued most.
+
+Alongside the cooling work I built dynamic simulation models of aircraft **landing-gear kinematics** — non-linear dynamic FEA (Simcenter / NX Nastran via FEMAP) for a hypersonic UAV. This is where the internship taught me its sharpest lesson. The transient solve came out unstable, and the tempting response is to blame the model. Instead I rebuilt the analysis in **Python** and worked on the numerics directly, tuning the numerical dissipation until stability improved by **45%**. The instability had never been in the physics — the solver defaults had quietly encoded an assumption nobody had checked, and the fix was to stop trusting the default and understand what the integrator was actually doing.
+
+That episode changed how I approach any simulation. Fixing the numerics did more for the model's trustworthiness than piling on extra fidelity ever would have, and I now treat a solver's defaults as choices to be interrogated rather than settings to be accepted.
+
+The other thing worth saying is that COMSOL, Siemens NX, and FEMAP were all new to me when I arrived. Becoming productive in an unfamiliar CAE toolchain within weeks — enough to ship validated hardware from it — is a habit I have leaned on in every role since.
 
 **Stack:** Siemens NX &nbsp;·&nbsp; **Tags:** CAD, thermal management, aerospace

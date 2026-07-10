@@ -7,9 +7,11 @@ importance: 4
 category: simulation
 ---
 
-A crashworthiness project on EV **battery enclosures**: a sandwich panel that must absorb crash energy without letting anything penetrate through to the cells. I automated **ABAQUS** penetration finite-element simulations with Python scripting and wrapped them in a **pymoo NSGA** multi-objective optimisation, trading off **specific energy absorption** against **penetration resistance**.
+An electric vehicle's battery enclosure has one job that never gets easier: in a crash it has to soak up energy and keep anything from punching through to the cells, because a breached battery is a fire. But it also has to be light, and those two demands pull in opposite directions — more material means more protection and more mass. This project treats a **sandwich-panel enclosure** as exactly that tug-of-war, trading **specific energy absorption** against **penetration resistance**.
 
-The design space mixes continuous and discrete variables: thicknesses of the top, middle and bottom sheets, the core geometry (height, angle, number of core elements), and the material of each sheet — chosen among **TRIP780** steel, **AA7020** aluminium and **MARS300** armour steel.
+The obstacle is that evaluating a single design means running a full crash finite-element simulation, which is far too slow and fiddly to drive by hand across the hundreds of candidates an optimiser wants to see. So the first real piece of work was automation: I wrapped **ABAQUS** penetration simulations in **Python scripting** so that a design vector goes in, a mesh is built, the crash is solved, and the performance metrics come back out, with no human in the loop. Only once that pipeline was reliable could I put a **pymoo NSGA** multi-objective optimiser on top of it and let the search run.
+
+What makes the design space genuinely awkward — and, for me, the most interesting part — is that it mixes **continuous and discrete variables**. The thicknesses of the top, middle and bottom sheets and the core geometry (height, angle, number of core elements) are continuous, but the material of each sheet is a discrete choice among **TRIP780** steel, **AA7020** aluminium and **MARS300** armour steel. You cannot smoothly interpolate between "steel" and "aluminium," so the optimiser has to reason over a space that is part landscape and part menu — the same mixed-variable difficulty I went on to make the subject of my MIT thesis.
 
 <div class="row justify-content-center">
     <div class="col-sm-10 mt-3 mt-md-0">
@@ -20,6 +22,8 @@ The design space mixes continuous and discrete variables: thicknesses of the top
     Pareto front from the NSGA search: penetration resistance versus specific energy absorption, colored along the front.
 </div>
 
+The output is not a single "best" enclosure but a **Pareto front** — a curve of designs where you cannot buy more penetration resistance without paying in energy absorption or weight. I find that the honest answer to this kind of problem: it hands the engineer the genuine trade-off to choose from rather than pretending one number settles it, and the design-space maps show _why_ each design sits where it does.
+
 <div class="row justify-content-center">
     <div class="col-sm-11 mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/projects/battery-enclosure-fig1.png" class="img-fluid rounded z-depth-1" zoomable=true %}
@@ -28,5 +32,7 @@ The design space mixes continuous and discrete variables: thicknesses of the top
 <div class="caption">
     Design-space exploration over all evaluated designs, colored by each design variable — sheet thicknesses and materials, core height, angle and element count.
 </div>
+
+The lasting takeaway was that automating the simulation was not a convenience but the whole enabling step: once a crash FE run is a callable function, optimisation over it stops being a heroic manual effort and becomes a loop you can trust — a pattern I have reused every time an expensive simulator sits inside a search.
 
 **Stack:** Python, ABAQUS, pymoo &nbsp;·&nbsp; **Tags:** FEM, crashworthiness, multi-objective optimisation

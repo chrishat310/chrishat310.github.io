@@ -7,6 +7,12 @@ importance: 1
 category: leadership
 ---
 
-As **Mechanical System Advisor** to **aCentauri Solar Racing**, I advised **20+ members** across Aerodynamics, Mechanical, and Structures preparing for the **Bridgestone World Solar Challenge 2025**, a 3000 km solar endurance race. I introduced GANTT-based scheduling, budgeting (~CHF 150K), and systems-engineering practices, and refined the solar car's Simcenter GFEM for load-case simulations.
+**[aCentauri Solar Racing](https://www.acentauri.ch/)** is an ETH Zürich student team, based in Dübendorf, that designs and builds solar race cars — vehicles engineered to cross the Australian outback at highway speeds on roughly the power of a household appliance. Their target was the **Bridgestone World Solar Challenge 2025**, a **3000 km** solar endurance race, and I came in as **Mechanical System Advisor** to a group of **20+ members** spread across Aerodynamics, Mechanical, and Structures.
+
+The role was deliberately advisory rather than hands-on, which was itself the lesson. On a student team, the temptation is to fix the interesting problem yourself; the more useful thing is to make twenty people's separate efforts add up to one car. A 3000 km race rewards nothing you can point to on a single component — it is won or lost on how the aerodynamics, structure, and mechanical systems agree with each other over three days of driving. So the value I could add was mostly at the seams.
+
+Concretely, I introduced the practices a young team needs to behave like an engineering organisation: **GANTT-based scheduling** so the three sub-teams' deadlines actually lined up, **budgeting** of around **CHF 150K**, and **systems-engineering** methods for tracking requirements and interfaces. On the technical side I refined the solar car's **Simcenter global finite-element model (GFEM)** — integrating components into a single model, refining the mesh in the regions that decide the result, adding load cases with more honest boundary conditions, and evaluating composite layups — so the team's structural decisions rested on a model they could trust rather than a collection of local ones.
+
+Advising rather than building sharpened a distinction I now take seriously: the hardest part of a large project is rarely any single calculation, it is keeping the whole system coherent while twenty people change their parts underneath you. Teaching a team to see its own interfaces turned out to be worth more than any one analysis I could have run for them.
 
 **Tags:** leadership, systems engineering, solar racing
