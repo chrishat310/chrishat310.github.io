@@ -42,6 +42,10 @@ column below records which is which.
 | `mixed-var-bo-fig1.png`      | Mixed-Variable Bayesian Optimization (MIT Thesis)     | real — TFM base+residual surrogate method diagram (TFM Figures.pdf p.1 embedded image)                                                      |
 | `battery-enclosure-fig1.png` | Multi-Objective Optimization of EV Battery Enclosures | real — design-space scatter grid colored by design variable (DBM-Final-Project repo, `Results/parameter_all data.png`)                      |
 | `composite-panel-fig1.png`   | Stiffened Composite Panel Optimization                | real — sizing-factor constraint plot (DASC_A2_A repo, `optimalfactor.png`)                                                                  |
+| `nova-chassis-fig1.png`      | NOVA Electric Racing — Bike Chassis                   | real — Ansys FEM stress plot of a chassis component (Engineering Portfolio.pdf p.2, cropped from 400 dpi render)                            |
+| `nova-chassis-fig2.png`      | NOVA Electric Racing — Bike Chassis                   | real — CAD render of the swingarm (Engineering Portfolio.pdf p.2, cropped from 400 dpi render)                                              |
+| `solar-boat-fig1.png`        | Swiss Solar Boat — Carbon-Fibre Foil                  | real — photo of the carbon-fibre lateral foil (Engineering Portfolio.pdf p.2, cropped from 400 dpi render, palette-quantised)               |
+| `solar-boat-fig2.png`        | Swiss Solar Boat — Carbon-Fibre Foil                  | real — photo of the CNC-machined negative foil mould (Engineering Portfolio.pdf p.2, cropped from 400 dpi render, palette-quantised)        |
 
 ## Replacing a generated graphic with a real photo/render
 
