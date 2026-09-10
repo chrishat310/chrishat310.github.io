@@ -69,6 +69,10 @@ check("site builds and has a home page", () => {
   assert(siteExists("index.html"), "_site/index.html not found — did jekyll build run?");
 });
 
+// Guard against accidental attribution of third-party work. The repository sits in the owner's
+// GitHub namespace but is not their authorship; this check protects that boundary. If GIT-BO
+// ever becomes a legitimate citation, narrow this check to only the chrishat310/GITBO path
+// rather than removing it entirely.
 check("GITBO does not appear anywhere in built output", () => {
   absent(allHtml(), "GITBO", "GITBO is not the owner's work and must not be listed");
   absent(allHtml(), "GIT-BO", "GIT-BO is not the owner's work and must not be listed");

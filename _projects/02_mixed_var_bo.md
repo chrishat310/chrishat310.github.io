@@ -20,7 +20,7 @@ What makes this timely is the surrogate. Classical Bayesian optimisation leans o
     Frozen tabular foundation models as surrogates: a base model produces mean, variance and quantile statistics that augment the input of a residual model, whose learned correction is added to the base prediction.
 </div>
 
-A thesis like this only means something if the numbers are trustworthy, so I spent as much effort on the evaluation as on the method: a theoretical mixed-variable benchmark split of my own, feeding a paper in preparation, plus nine curated engineering-design benchmarks so that different methods can be compared on a common footing rather than each author's favourite toy problem. Using established baselines rather than inventing my own was a deliberate choice — reusing known references keeps my comparisons honest.
+A thesis like this only means something if the numbers are trustworthy, so I spent as much effort on the evaluation as on the method: a theoretical mixed-variable benchmark split of my own, feeding a paper in preparation, plus nine curated engineering-design benchmarks so that different methods can be compared on a common footing rather than each author's favourite toy problem.
 
 The codebase (`mvbo`) is a packaged, tested Python library rather than a pile of experiment scripts: roughly 3,000 lines of `pytest` tests, `ruff` and `mypy` in the loop, a registry-based architecture for surrogates / acquisitions / encodings, Hydra configuration, Weights & Biases experiment tracking, and SLURM / `submitit` orchestration on HPC clusters. That structure was not gold-plating — running hundreds of optimisation trials across nine benchmarks on a cluster is only reproducible if the configuration and the logging are disciplined from the start.
 
