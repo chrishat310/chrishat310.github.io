@@ -137,6 +137,15 @@ check("repositories page is not in the nav", () => {
   absent(html, 'href="/repositories/"', "repositories should no longer be a nav item");
 });
 
+check("three new projects exist in the index tier", () => {
+  for (const slug of ["16_load_forecasting", "17_cad_retrieval", "18_modal_analysis"]) {
+    assert(siteExists(`projects/${slug}/index.html`), `missing new project page: ${slug}`);
+  }
+  const work = site("work/index.html");
+  contains(work, "Probabilistic Load Forecasting", "load forecasting missing from /work/");
+  contains(work, "CAD-to-CAD Retrieval", "CAD retrieval missing from /work/");
+});
+
 // ------------------------------------------------------------- END CHECKS
 
 let failed = 0;
