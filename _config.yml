@@ -175,6 +175,9 @@ kramdown:
 # Includes & excludes
 include: ["_pages", "_scripts"]
 exclude:
+  - .superpowers/
+  - docs/
+  - test/
   - bin/
   - project_presentations/
   - CONTRIBUTING.md
