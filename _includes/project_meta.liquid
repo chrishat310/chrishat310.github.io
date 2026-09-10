@@ -1,0 +1,39 @@
+<div class="proj-meta">
+  {% if page.objective %}
+    <div class="proj-meta-row">
+      <span class="proj-meta-label">Objective</span>
+      <div class="proj-meta-value">{{ page.objective | markdownify | remove: '<p>' | remove: '</p>' }}</div>
+    </div>
+  {% endif %}
+  {% if page.role %}
+    <div class="proj-meta-row">
+      <span class="proj-meta-label">Contribution</span>
+      <div class="proj-meta-value">{{ page.role | markdownify | remove: '<p>' | remove: '</p>' }}</div>
+    </div>
+  {% endif %}
+  {% if page.result %}
+    <div class="proj-meta-row">
+      <span class="proj-meta-label">Result</span>
+      <div class="proj-meta-value">{{ page.result | markdownify | remove: '<p>' | remove: '</p>' }}</div>
+    </div>
+  {% endif %}
+  {% if page.methods and page.methods.size > 0 %}
+    <div class="proj-meta-row">
+      <span class="proj-meta-label">Methods</span>
+      <div class="proj-meta-value">
+        {% for m in page.methods %}<span class="proj-method">{{ m }}</span>{% endfor %}
+      </div>
+    </div>
+  {% endif %}
+</div>
+
+{% if page.metrics and page.metrics.size > 0 %}
+  <div class="proj-metrics">
+    {% for metric in page.metrics %}
+      <div class="proj-metric">
+        <span class="proj-metric-value">{{ metric.value }}</span>
+        <span class="proj-metric-label">{{ metric.label }}</span>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}

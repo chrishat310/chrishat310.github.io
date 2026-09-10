@@ -78,6 +78,14 @@ check("GITBO does not appear anywhere in built output", () => {
   absent(allHtml(), "GIT-BO", "GIT-BO is not the owner's work and must not be listed");
 });
 
+check("flagship page renders structured fields", () => {
+  const html = site("projects/02_mixed_var_bo/index.html");
+  contains(html, "proj-meta", "flagship layout did not render the structured meta block");
+  contains(html, "Objective", "objective label missing");
+  contains(html, "Contribution", "contribution label missing");
+  contains(html, "Result", "result label missing");
+});
+
 // ------------------------------------------------------------- END CHECKS
 
 let failed = 0;
