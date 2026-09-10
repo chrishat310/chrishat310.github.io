@@ -13,7 +13,7 @@
 ## Global Constraints
 
 - **Truth-first.** No fact, metric, tool, outcome, or ownership claim may be added unless it already appears in `cv.md` (at `/mnt/c/Users/chris/Documents/GitHub/CV_Makeup/career-ops/cv.md`), an existing file in this repo, or the spec. If a field cannot be filled from those sources, leave it out and flag it — never invent a plausible value.
-- **AAAI venue suppression.** The string `AAAI` must not appear anywhere in built output. BOCoDe is presented as an arXiv preprint with no venue named.
+- **Embargoed-venue suppression.** The venue's name must not appear anywhere in built output. BOCoDe is presented as an arXiv preprint with no venue named.
 - **Hitachi confidentiality.** No figure, plot, geometry, or numerical result originating from the Hitachi Energy internship enters the site.
 - **Author names.** Use the initials exactly as they appear in `cv.md`. Do not expand initials into full first names.
 - **Spelling:** British/Swiss-English — `optimise`, `behaviour`, `modelling`, `analyse`.
@@ -217,9 +217,9 @@ Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
 
 ---
 
-### Task 2: Remove GITBO from the public repositories list
+### Task 2: Remove the misattributed repository from the public repositories list
 
-`_data/repositories.yml` publicly lists `chrishat310/GITBO` among the owner's repositories. The owner has confirmed it is not his work. This is an attribution correction, not tidying.
+`_data/repositories.yml` publicly lists a repository among the owner's repositories that the owner has confirmed is not his work. This is an attribution correction, not tidying.
 
 **Files:**
 - Modify: `_data/repositories.yml`
@@ -234,9 +234,8 @@ Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
 In `test/site-checks.mjs`, inside the CHECKS section, after the existing home page check:
 
 ```js
-check("GITBO does not appear anywhere in built output", () => {
-  absent(allHtml(), "GITBO", "GITBO is not the owner's work and must not be listed");
-  absent(allHtml(), "GIT-BO", "GIT-BO is not the owner's work and must not be listed");
+check("misattributed repository does not appear anywhere in built output", () => {
+  absent(allHtml(), MISATTRIBUTED_REPO_NAME, "this repository is not the owner's work and must not be listed");
 });
 ```
 
@@ -246,13 +245,13 @@ check("GITBO does not appear anywhere in built output", () => {
 bundle exec jekyll build && node test/site-checks.mjs
 ```
 
-Expected: `FAIL  GITBO does not appear anywhere in built output` with message `GITBO is not the owner's work and must not be listed`.
+Expected: `FAIL  misattributed repository does not appear anywhere in built output` with message `this repository is not the owner's work and must not be listed`.
 
 If this check unexpectedly PASSES, stop — it means the repositories page is not being built, and the removal below would be a no-op that hides the real problem.
 
 - [ ] **Step 3: Remove the entry**
 
-In `_data/repositories.yml`, delete the `chrishat310/GITBO` line so `github_repos` reads:
+In `_data/repositories.yml`, delete the line for the misattributed repository so `github_repos` reads:
 
 ```yaml
 github_repos:
@@ -269,13 +268,13 @@ Leave `github_users` and `repo_description_lines_max` unchanged.
 bundle exec jekyll build && node test/site-checks.mjs
 ```
 
-Expected: `PASS  GITBO does not appear anywhere in built output`, 2/2 checks passed.
+Expected: `PASS  misattributed repository does not appear anywhere in built output`, 2/2 checks passed.
 
 - [ ] **Step 5: Commit**
 
 ```bash
 git add _data/repositories.yml test/site-checks.mjs
-git commit -m "fix: remove GITBO from public repositories list
+git commit -m "fix: remove misattributed repository from public repositories list
 
 The repo sits on the owner's GitHub and reads as a credential, but the
 work is not his. Listing it publicly is an attribution risk. Guarded by
@@ -1140,7 +1139,7 @@ Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
 
 ### Task 7: Publications section
 
-`_bibliography/papers.bib` is currently 0 bytes and jekyll-scholar is already in the Gemfile. The AAAI venue must not appear in output.
+`_bibliography/papers.bib` is currently 0 bytes and jekyll-scholar is already in the Gemfile. The embargoed venue must not be named in output.
 
 **Files:**
 - Modify: `_bibliography/papers.bib`
@@ -1163,11 +1162,11 @@ check("publications page lists both papers", () => {
   contains(html, "Mixed", "Mixed & Matched missing from publications");
 });
 
-check("AAAI is never named in built output", () => {
+check("no embargoed venue name in built output", () => {
   absent(
     allHtml(),
-    "AAAI",
-    "AAAI policy forbids non-anonymous online material naming the venue — summary-rejection risk"
+    EMBARGOED_VENUE, // the literal string lives only in test/site-checks.mjs
+    "built output must never name a venue under a non-anonymity embargo"
   );
 });
 ```
@@ -1178,7 +1177,7 @@ check("AAAI is never named in built output", () => {
 bundle exec jekyll build && node test/site-checks.mjs
 ```
 
-Expected: `FAIL  publications page lists both papers` (missing built file). The AAAI check should already PASS — that is correct and it is there as a regression guard, not a red-to-green step.
+Expected: `FAIL  publications page lists both papers` (missing built file). The embargoed-venue check should already PASS — that is correct and it is there as a regression guard, not a red-to-green step.
 
 - [ ] **Step 3: Populate the bibliography**
 
@@ -1242,7 +1241,7 @@ The work behind this project appears in [Mixed & Matched: Surrogate or Search fo
 bundle exec jekyll build && node test/site-checks.mjs
 ```
 
-Expected: `PASS  publications page lists both papers` and `PASS  AAAI is never named in built output`, 10/10 checks passed.
+Expected: `PASS  publications page lists both papers` and `PASS  no embargoed venue name in built output`, 10/10 checks passed.
 
 If the bibliography renders empty, confirm `scholar:` settings in `_config.yml` point at `_bibliography` and that `bibliography: papers.bib` matches the filename.
 
@@ -1257,7 +1256,7 @@ git add _bibliography/papers.bib _pages/publications.md _projects/02_mixed_var_b
 git commit -m "feat: add publications section
 
 Two papers that were in cv.md but nowhere on the site. BOCoDe ships as an
-arXiv preprint with no venue named — AAAI policy forbids non-anonymous
+arXiv preprint with no venue named — its target venue forbids non-anonymous
 online material stating the submission, on pain of summary rejection. A
 check now guards this across all built output.
 

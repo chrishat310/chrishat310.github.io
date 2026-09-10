@@ -15,10 +15,6 @@ role: >
   request, iterating until it passed the project's ruff, mypy and pre-commit
   checks and answered review comments.
 methods: [Python, PyTorch, GANs, SliceGAN, VAE]
-result: >
-  Merged into EngiOpt, the IDEAL Lab's open-source engineering-design
-  optimisation library, as pull request #43. Training runs for the library's
-  models are logged publicly on Weights & Biases.
 metrics:
   - {label: Additions merged, value: "~2,100"}
   - {label: Pull request, value: "IDEALLab/EngiOpt #43"}

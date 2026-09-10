@@ -67,14 +67,14 @@ The website is built first; the PDF is generated from it. The PDF is regenerated
 
 **Publications (2)** — new section, new nav item.
 
-- *BOCoDe: Engineering-Centered Benchmarking for Bayesian Optimization.* Yu, **Hatterer**, Narayanan, Picard, Ahmed. arXiv:2608.15073. Public preprint. **Venue must not be named** — see §8.
+- *BOCoDe: Engineering-Centered Benchmarking for Bayesian Optimization.* Yu, **Hatterer**, Narayanan, Picard, Ahmed. arXiv:2608.15073. Public preprint. **Venue must not be named** — see §8, embargoed-venue suppression.
 - *Mixed & Matched: Surrogate or Search for Mixed-Variable Bayesian Optimization in Engineering Design.* **Hatterer**, Yu, Ahmed. In submission, TMLR.
 
 ### Navigation
 
 `work` · `publications` · `cv`
 
-The current `projects` and `repositories` items collapse into `work`. The repositories page is retired as a nav item (see §8 on GITBO).
+The current `projects` and `repositories` items collapse into `work`. The repositories page is retired as a nav item (see §8 on the misattributed third-party repository).
 
 ## 5. Content model
 
@@ -146,9 +146,9 @@ The site's one interactive set-piece. Subject chosen because it collapses the th
 
 **Truth-first.** No fact, metric, tool, outcome or ownership claim enters the site unless it is already in `cv.md`, an existing repo file, or stated by the owner directly. Where a stronger phrasing needs a fact that does not exist, the weaker phrasing ships.
 
-**AAAI venue suppression (load-bearing).** `cv.md` carries a note naming this site specifically: AAAI policy forbids non-anonymous online material from stating the work was submitted there, on pain of summary rejection. BOCoDe goes up as an arXiv preprint with **no venue named** until the decision is out. This applies to the site, the PDF, and any generated CV.
+**Embargoed-venue suppression (load-bearing).** `cv.md` carries a note naming this site specifically: BOCoDe's target venue forbids non-anonymous online material from stating or implying where the paper was submitted, on pain of summary rejection. BOCoDe goes up as an arXiv preprint with **no venue named** until the decision is out. This applies to the site, the PDF, and any generated CV.
 
-**GITBO removal.** `_data/repositories.yml` currently lists `chrishat310/GITBO` publicly among the owner's repos. The owner has confirmed it is not his work. It is removed. This is an attribution risk, not a tidying preference.
+**Misattributed-repository removal.** `_data/repositories.yml` currently lists a repository publicly among the owner's repos that is not his work. The owner has confirmed this. It is removed. This is an attribution risk, not a tidying preference.
 
 **Private repos.** Project code is not public, so per-project code links are not available. Proof has to rest on figures and precisely stated results — which is what the criteria ask for regardless.
 
@@ -174,7 +174,7 @@ No figure, plot, geometry or result originating from the Hitachi internship ente
 - Publications layout
 - `/portfolio/print/` route and print stylesheet
 - `generate-portfolio-pdf.mjs` (Playwright)
-- Remove GITBO from `_data/repositories.yml`
+- Remove the misattributed third-party repository from `_data/repositories.yml`
 
 ## 10. Out of scope
 
@@ -194,5 +194,5 @@ No figure, plot, geometry or result originating from the Hitachi internship ente
 4. `portfolio.pdf` regenerates from site content in one command, and its flagship pages carry the same objective, contribution, metrics, figures and result as the web pages — the interactive demo excepted, per §3.
 5. The live demo runs on load and degrades to a static figure without JavaScript.
 6. No venue is named for BOCoDe anywhere in the built output.
-7. GITBO does not appear anywhere in the built output.
+7. The misattributed third-party repository does not appear anywhere in the built output.
 8. No claim on the site is unsupported by `cv.md`, repo files, or the owner's direct statements.

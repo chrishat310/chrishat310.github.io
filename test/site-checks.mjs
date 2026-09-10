@@ -152,11 +152,11 @@ check("publications page lists both papers", () => {
   contains(html, "Mixed", "Mixed & Matched missing from publications");
 });
 
-check("AAAI is never named in built output", () => {
+check("no embargoed venue name in built output", () => {
   absent(
     allHtml(),
     "AAAI",
-    "AAAI policy forbids non-anonymous online material naming the venue — summary-rejection risk"
+    "policy forbids non-anonymous online material naming this venue — summary-rejection risk"
   );
 });
 
