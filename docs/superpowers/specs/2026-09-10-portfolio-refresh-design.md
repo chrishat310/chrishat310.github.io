@@ -55,13 +55,13 @@ The website is built first; the PDF is generated from it. The PDF is regenerated
 
 1. **Mixed-Variable Bayesian Optimisation** (MIT DeCoDe Lab thesis) — carries the live demo and the TMLR paper
 2. **EngiOpt — 3D Generative Models** — maintainer-reviewed open-source PR, ~2,100 additions, ruff/mypy/CI
-3. **Self-Healing HV Capacitors** (Hitachi Energy) — the only industry R&D on the site
+3. **EV Battery Enclosure Optimisation** — NSGA multi-objective, Fortran user subroutines driving automated Abaqus runs inside the optimisation loop
 4. **NOVA Electric Racing — Bike Chassis** — lead engineer, team of six, Ansys FEM across 20+ parts, flax-fibre bodywork
 
 **Index (14)** — compact, filterable cards. Nothing is deleted.
 
 - *Software & ML:* GEFCom2014 probabilistic load forecasting `new` · CAD-to-CAD retrieval `new` · BayesOpt drug candidates · Bayesian NN satellite imagery · N-body C++ · GP air quality
-- *Simulation:* Spectral/modal analysis of aluminium plates `new` · EV battery-enclosure NSGA · X-ray CT of fracture · Topology optimisation of damaged structures
+- *Simulation:* Spectral/modal analysis of aluminium plates `new` · Self-healing HV capacitors, Hitachi Energy `demoted from flagship` · X-ray CT of fracture · Topology optimisation of damaged structures
 - *Mechanical & hardware:* Swiss Solar Boat carbon-fibre foil `promoted index entry` · Axalp battery-pack cooling · Stiffened composite panel
 - *Leadership:* aCentauri Solar Racing
 
@@ -152,7 +152,9 @@ The site's one interactive set-piece. Subject chosen because it collapses the th
 
 **Private repos.** Project code is not public, so per-project code links are not available. Proof has to rest on figures and precisely stated results — which is what the criteria ask for regardless.
 
-**Hitachi figures — open risk.** The Hitachi page is now the most important on the site for an industry reader and currently has no figures. Internship work on HV capacitors may be commercially confidential. If publishable figures cannot be produced, this page needs either owner-generated substitute visuals or demotion out of the flagship tier. **Blocking for the flagship tier; must be resolved before implementation.**
+**Hitachi is unpublishable — resolved.** The HV-capacitor work is not published and cannot carry public figures, so it cannot satisfy the flagship figure minimum. It is **demoted to a full index page** under Simulation, and the EV battery-enclosure project takes flagship slot 3. The industry experience remains visible via the CV, the about page and its index entry; what it loses is a flagship slot it could not have filled.
+
+No figure, plot, geometry or result originating from the Hitachi internship enters the site or the PDF until the owner confirms it is clearable.
 
 ## 9. Work required
 
@@ -161,8 +163,8 @@ The site's one interactive set-piece. Subject chosen because it collapses the th
 - Write 3 new project pages from `cv.md`: GEFCom2014, CAD-to-CAD retrieval, spectral/modal analysis
 - Write the publications page
 - Convert 14 index entries to the lighter schema
-- Source figures for Hitachi (blocked, see §8)
 - Promote the Swiss Solar Boat index entry
+- Demote Hitachi to an index page; no figures (see §8)
 
 **Build**
 - Register C theme over al-folio: hero, cards, type, motion, dark variant
