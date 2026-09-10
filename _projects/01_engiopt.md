@@ -20,7 +20,7 @@ result: >
   optimisation library, as pull request #43. Training runs for the library's
   models are logged publicly on Weights & Biases.
 metrics:
-  - {label: Additions merged, value: ~2,100}
+  - {label: Additions merged, value: "~2,100"}
   - {label: Pull request, value: "IDEALLab/EngiOpt #43"}
 importance: 2
 ---

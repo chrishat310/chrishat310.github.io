@@ -102,6 +102,29 @@ check("NOVA states its validated load factor", () => {
   contains(html, "proj-meta-label\">Result<", "NOVA has a result field and must render the Result row");
 });
 
+// A comma inside an unquoted YAML flow mapping is a pair separator, not a literal.
+// `{label: X, value: ~2,100}` silently parses as value "~2" and the page ships a
+// wrong number - worse than omitting it. Any metric value containing a comma must
+// be quoted. This reads source frontmatter, not built output, so it catches the
+// mistake before a render can hide it.
+check("metric values containing commas are quoted", () => {
+  const dir = "_projects";
+  for (const name of readdirSync(dir)) {
+    if (!name.endsWith(".md")) continue;
+    const text = readFileSync(join(dir, name), "utf8");
+    text.split("\n").forEach((line, i) => {
+      const m = line.match(/\{[^}]*\bvalue:\s*([^}]*)\}/);
+      if (!m) return;
+      const raw = m[1].trim();
+      const quoted = /^".*"$/.test(raw) || /^'.*'$/.test(raw);
+      assert(
+        quoted || !raw.includes(","),
+        `${name}:${i + 1} metric value contains an unquoted comma and will truncate: ${raw}`
+      );
+    });
+  }
+});
+
 // ------------------------------------------------------------- END CHECKS
 
 let failed = 0;

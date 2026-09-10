@@ -659,7 +659,7 @@ result: >
   optimisation library, as pull request #43. Training runs for the library's
   models are logged publicly on Weights & Biases.
 metrics:
-  - {label: Additions merged, value: ~2,100}
+  - {label: Additions merged, value: "~2,100"}
   - {label: Pull request, value: IDEALLab/EngiOpt #43}
 importance: 2
 ---
@@ -1074,7 +1074,7 @@ methods: [Python, B-rep, Shape Descriptors, k-NN]
 result: >
   Precision@5 of 0.387 on a hand-labelled 277-pair gold set.
 metrics:
-  - {label: Corpus, value: 1,008 parts}
+  - {label: Corpus, value: "1,008 parts"}
   - {label: Gold set, value: 277 pairs}
   - {label: Precision@5, value: 0.387}
 importance: 6
