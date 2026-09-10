@@ -9,19 +9,19 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-projects",
-          title: "projects",
-          description: "Selected work across software &amp; ML, simulation, mechanical/hardware, and team leadership.",
+  },{id: "nav-work",
+          title: "work",
+          description: "Selected engineering and machine-learning projects.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/projects/";
+            window.location.href = "/work/";
           },
-        },{id: "nav-repositories",
-          title: "repositories",
-          description: "GitHub profile stats and selected open-source repositories.",
+        },{id: "nav-publications",
+          title: "publications",
+          description: "Preprint and in-submission work in Bayesian optimisation for engineering design.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/repositories/";
+            window.location.href = "/publications/";
           },
         },{id: "nav-cv",
           title: "CV",
@@ -37,7 +37,7 @@ ninja.data = [{
               window.location.href = "/projects/01_engiopt/";
             },},{id: "projects-mixed-variable-bayesian-optimization-mit-thesis",
           title: 'Mixed-Variable Bayesian Optimization (MIT Thesis)',
-          description: "Bayesian optimisation over mixed variables with foundation-model surrogates.",
+          description: "Mixed-variable Bayesian optimisation with Prior Fitted Networks for engineering design.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/02_mixed_var_bo/";
             },},{id: "projects-bayesian-optimisation-of-drug-candidate-features",
@@ -97,7 +97,7 @@ ninja.data = [{
               window.location.href = "/projects/13_acentauri/";
             },},{id: "projects-multi-objective-optimization-of-ev-battery-enclosures",
           title: 'Multi-Objective Optimization of EV Battery Enclosures',
-          description: "NSGA optimisation of a sandwich-panel battery enclosure with automated ABAQUS crash FE.",
+          description: "Parametric design driving automated FEA inside a multi-objective optimisation loop.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/14_battery_enclosure_opt/";
             },},{id: "projects-stiffened-composite-panel-optimization",
@@ -105,6 +105,21 @@ ninja.data = [{
           description: "MATLAB sizing of a stiffened composite panel under compression.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/15_composite_panel/";
+            },},{id: "projects-probabilistic-load-forecasting-gefcom2014",
+          title: 'Probabilistic Load Forecasting — GEFCom2014',
+          description: "Month-ahead hourly electricity load as 99-quantile predictive distributions.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/16_load_forecasting/";
+            },},{id: "projects-cad-to-cad-retrieval",
+          title: 'CAD-to-CAD Retrieval',
+          description: "Shape retrieval over a 1,008-part b-rep corpus with a four-family evaluation.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/17_cad_retrieval/";
+            },},{id: "projects-spectral-and-modal-analysis-of-aluminium-plates",
+          title: 'Spectral and Modal Analysis of Aluminium Plates',
+          description: "Reconstructive testing to identify critical resonance frequencies.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/18_modal_analysis/";
             },},{
         id: 'social-cv',
         title: 'CV',
