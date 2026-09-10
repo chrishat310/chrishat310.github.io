@@ -160,6 +160,12 @@ check("AAAI is never named in built output", () => {
   );
 });
 
+check("about page points at work and publications", () => {
+  const html = site("index.html");
+  contains(html, "/work/", "about page should link to /work/");
+  contains(html, "/publications/", "about page should link to /publications/");
+});
+
 // ------------------------------------------------------------- END CHECKS
 
 let failed = 0;
