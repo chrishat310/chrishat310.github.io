@@ -9,5 +9,4 @@ Run:
 
     bundle exec jekyll build && node test/site-checks.mjs
 
-Exits non-zero if any check fails. Add checks in the CHECKS section of
-`site-checks.mjs`.
+Exits non-zero if any check fails. Checks must be synchronous — an async check would return a Promise before its assertions run, recording a false pass. Add checks in the CHECKS section of `site-checks.mjs`.

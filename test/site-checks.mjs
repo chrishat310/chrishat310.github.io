@@ -11,8 +11,12 @@ const results = [];
 
 function check(name, fn) {
   try {
-    fn();
-    results.push({ name, ok: true });
+    const result = fn();
+    if (result && typeof result.then === "function") {
+      results.push({ name, ok: false, message: "checks must be synchronous; async checks report false pass before assertions run" });
+    } else {
+      results.push({ name, ok: true });
+    }
   } catch (err) {
     results.push({ name, ok: false, message: err.message });
   }
