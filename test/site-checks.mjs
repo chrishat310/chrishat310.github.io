@@ -146,6 +146,20 @@ check("three new projects exist in the index tier", () => {
   contains(work, "CAD-to-CAD Retrieval", "CAD retrieval missing from /work/");
 });
 
+check("publications page lists both papers", () => {
+  const html = site("publications/index.html");
+  contains(html, "BOCoDe", "BOCoDe missing from publications");
+  contains(html, "Mixed", "Mixed & Matched missing from publications");
+});
+
+check("AAAI is never named in built output", () => {
+  absent(
+    allHtml(),
+    "AAAI",
+    "AAAI policy forbids non-anonymous online material naming the venue — summary-rejection risk"
+  );
+});
+
 // ------------------------------------------------------------- END CHECKS
 
 let failed = 0;

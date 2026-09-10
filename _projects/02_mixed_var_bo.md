@@ -33,3 +33,5 @@ Coming to machine learning from mechanical engineering, the thing I care about m
 
 **Stack:** Python, PyTorch, BoTorch, GPyTorch &nbsp;·&nbsp; **Tags:** Bayesian optimisation, foundation models, HPC, software architecture
 Supervised by Prof. Faez Ahmed and Prof. Mark Fuge.
+
+The work behind this project appears in [Mixed & Matched: Surrogate or Search for Mixed-Variable Bayesian Optimization in Engineering Design](/publications/), currently in submission.
