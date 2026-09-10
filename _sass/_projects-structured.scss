@@ -1,0 +1,129 @@
+.proj-meta {
+  display: grid;
+  gap: 0;
+  margin: 1.5rem 0;
+  border-top: 1px solid var(--global-divider-color);
+}
+
+.proj-meta-row {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--global-divider-color);
+
+  @media (max-width: 576px) {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+}
+
+.proj-meta-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--global-text-color-light);
+  padding-top: 0.15rem;
+}
+
+.proj-meta-value {
+  color: var(--global-text-color);
+}
+
+.proj-method {
+  display: inline-block;
+  font-size: 0.8rem;
+  padding: 0.1rem 0.5rem;
+  margin: 0 0.3rem 0.3rem 0;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 3px;
+  color: var(--global-text-color-light);
+}
+
+.proj-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 1.5rem 0;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.proj-metric {
+  display: flex;
+  flex-direction: column;
+}
+
+.proj-metric-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--global-theme-color);
+  line-height: 1.1;
+}
+
+.proj-metric-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--global-text-color-light);
+  margin-top: 0.2rem;
+}
+
+.proj-figures {
+  display: grid;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.proj-figure figcaption {
+  font-size: 0.85rem;
+  color: var(--global-text-color-light);
+  margin-top: 0.5rem;
+}
+
+.work-section-title {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.work-index-category {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--global-text-color-light);
+  margin: 1.5rem 0 0.5rem;
+}
+
+.work-index-list {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--global-divider-color);
+}
+
+.work-index-row {
+  display: grid;
+  grid-template-columns: minmax(12rem, 20rem) 1fr;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--global-divider-color);
+  color: inherit;
+  text-decoration: none;
+
+  &:hover .work-index-title {
+    color: var(--global-theme-color);
+  }
+
+  @media (max-width: 576px) {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+}
+
+.work-index-title {
+  font-weight: 500;
+}
+
+.work-index-desc {
+  color: var(--global-text-color-light);
+  font-size: 0.9rem;
+}

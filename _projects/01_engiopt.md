@@ -1,10 +1,24 @@
 ---
-layout: page
+layout: flagship
 title: EngiOpt — 3D Generative Models (Open Source)
 description: Extended generative models to 3D and merged them into the open-source EngiOpt library.
 img: assets/img/projects/engiopt.png
-importance: 1
+tier: flagship
 category: software
+objective: >
+  Take a family of generative models that had only ever produced 2D fields —
+  GANs, SliceGAN, and a multi-variable Variational Autoencoder — and make
+  them generate usable 3D volumes of engineering geometry.
+role: >
+  Re-implemented each model for 3D, trained them on engineering geometries,
+  and contributed the work upstream as a single maintainer-reviewed pull
+  request, iterating until it passed the project's ruff, mypy and pre-commit
+  checks and answered review comments.
+methods: [Python, PyTorch, GANs, SliceGAN, VAE]
+metrics:
+  - {label: Additions merged, value: "~2,100"}
+  - {label: Pull request, value: "IDEALLab/EngiOpt #43"}
+importance: 2
 ---
 
 Most generative-design research lives in 2D — square images of cross-sections, silhouettes, or slices — because a 2D model is easy to train and easy to look at. Real engineering geometry is not 2D. For my MSc semester project with the **IDEAL Lab** (AI in Engineering Design), the task was to take a family of generative models that had only ever produced 2D fields — GANs, SliceGAN, and a multi-variable Variational Autoencoder — and make them generate proper **3D volumes** of engineering geometry.

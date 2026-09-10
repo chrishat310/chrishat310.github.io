@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: MSc Computational Science &amp; Engineering, ETH Zürich · MIT thesis · scientific Python &amp; simulation
+subtitle: MSc Computational Science &amp; Engineering, ETH Zürich · MIT thesis · machine learning for engineering design
 
 profile:
   align: right
@@ -26,4 +26,4 @@ I am an MSc candidate in **Computational Science &amp; Engineering** at **ETH Z�
 
 My work sits where **scientific computing** meets **engineering**. I build structured, tested Python (pytest, ruff, mypy) for research and simulation; my merged pull request to the open-source [EngiOpt](https://github.com/IDEALLab/EngiOpt) library (~2,142 additions across 73 commits, passing ruff, mypy, and pre-commit CI) is the clearest evidence I write code other engineers can own. I care in particular about uncertainty — how certain a model is tends to be the question that decides whether anyone can act on it. Earlier, I developed multi-physics simulations at **Hitachi Energy** and led mechanical and aerospace projects spanning CAD, FEM, and composites.
 
-This site collects my work across **software &amp; ML**, **simulation &amp; modelling**, **mechanical &amp; hardware**, and **team leadership**. Use the [projects](/projects/) page to filter by area, or see my [CV](/cv/).
+This site collects my work across **software &amp; ML**, **simulation &amp; modelling**, **mechanical &amp; hardware**, and **team leadership**. Start with the four projects on the [work](/work/) page, see [publications](/publications/), or read my [CV](/cv/).

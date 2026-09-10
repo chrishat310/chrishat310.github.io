@@ -3,7 +3,7 @@ layout: page
 title: Aircraft Battery-Pack Cooling System
 description: Lightweight auxiliary battery-pack cooling system in Siemens NX (~30% lighter).
 img: assets/img/projects/axalp-cooling.png
-importance: 1
+importance: 2
 category: mechanical
 ---
 
