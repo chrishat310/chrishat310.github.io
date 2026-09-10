@@ -12,10 +12,6 @@ objective: >
 role: >
   MSc thesis at MIT's DeCoDe Lab.
 methods: [Python, PyTorch, Bayesian Optimisation, Prior Fitted Networks]
-result: >
-  Produced a manuscript, "Mixed & Matched: Surrogate or Search for
-  Mixed-Variable Bayesian Optimization in Engineering Design," now in
-  submission to the Transactions on Machine Learning Research (TMLR).
 figures:
   - path: assets/img/projects/mixed-var-bo-fig1.png
     caption: >

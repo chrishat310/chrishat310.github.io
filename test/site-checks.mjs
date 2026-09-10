@@ -83,7 +83,10 @@ check("flagship page renders structured fields", () => {
   contains(html, "proj-meta", "flagship layout did not render the structured meta block");
   contains(html, "Objective", "objective label missing");
   contains(html, "Contribution", "contribution label missing");
-  contains(html, "Result", "result label missing");
+  // This project's frontmatter carries no `result:` field by design: the only fact on
+  // record (TMLR submission status) is process metadata, not an outcome evaluated against
+  // the objective, so the page ships with no stated result rather than a mislabelled one.
+  absent(html, "proj-meta-label\">Result<", "result label should not render when page.result is absent");
 });
 
 // ------------------------------------------------------------- END CHECKS

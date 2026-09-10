@@ -13,10 +13,9 @@ layout: default
     {% if page.figures and page.figures.size > 0 %}
       <div class="proj-figures">
         {% for fig in page.figures %}
-          <figure class="proj-figure">
-            {% include figure.liquid loading="eager" path=fig.path class="img-fluid rounded z-depth-1" zoomable=true %}
-            <figcaption>{{ fig.caption }}</figcaption>
-          </figure>
+          <div class="proj-figure">
+            {% include figure.liquid loading="eager" path=fig.path class="img-fluid rounded z-depth-1" zoomable=true caption=fig.caption %}
+          </div>
         {% endfor %}
       </div>
     {% endif %}
