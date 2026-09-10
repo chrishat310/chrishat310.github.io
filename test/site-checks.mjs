@@ -125,6 +125,18 @@ check("metric values containing commas are quoted", () => {
   }
 });
 
+check("work page separates flagship and index tiers", () => {
+  const html = site("work/index.html");
+  contains(html, "work-flagships", "flagship section missing from /work/");
+  contains(html, "work-index", "index section missing from /work/");
+  contains(html, "NOVA Electric Racing", "NOVA should appear in the flagship tier");
+});
+
+check("repositories page is not in the nav", () => {
+  const html = site("index.html");
+  absent(html, 'href="/repositories/"', "repositories should no longer be a nav item");
+});
+
 // ------------------------------------------------------------- END CHECKS
 
 let failed = 0;

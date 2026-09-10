@@ -3,7 +3,7 @@ layout: page
 permalink: /repositories/
 title: repositories
 description: GitHub profile stats and selected open-source repositories.
-nav: true
+nav: false
 nav_order: 4
 ---
 
